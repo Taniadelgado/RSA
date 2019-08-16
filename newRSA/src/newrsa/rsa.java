@@ -83,6 +83,7 @@ private BigInteger[] big;
         areaDestino = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
         JT_clave_publica = new javax.swing.JTextArea();
+        jButton3 = new javax.swing.JButton();
         JP_decifrar = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -94,6 +95,7 @@ private BigInteger[] big;
         JT_texto_cifrado = new javax.swing.JTextArea();
         jScrollPane9 = new javax.swing.JScrollPane();
         claveprivada = new javax.swing.JTextArea();
+        jButton4 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         JM_generar = new javax.swing.JMenu();
         JM_cifrar = new javax.swing.JMenu();
@@ -211,7 +213,7 @@ private BigInteger[] big;
 
         jLabel11.setText("Texto cifrado");
 
-        jButton1.setText("Copiar");
+        jButton1.setText("Cifrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -229,6 +231,13 @@ private BigInteger[] big;
         JT_clave_publica.setColumns(20);
         JT_clave_publica.setRows(5);
         jScrollPane5.setViewportView(JT_clave_publica);
+
+        jButton3.setText("copiar cifrado");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JP_cifrarLayout = new javax.swing.GroupLayout(JP_cifrar);
         JP_cifrar.setLayout(JP_cifrarLayout);
@@ -250,7 +259,10 @@ private BigInteger[] big;
                         .addGroup(JP_cifrarLayout.createSequentialGroup()
                             .addGap(87, 87, 87)
                             .addGroup(JP_cifrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1)
+                                .addGroup(JP_cifrarLayout.createSequentialGroup()
+                                    .addComponent(jButton3)
+                                    .addGap(87, 87, 87)
+                                    .addComponent(jButton1))
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(JP_cifrarLayout.createSequentialGroup()
@@ -274,7 +286,9 @@ private BigInteger[] big;
                 .addGap(12, 12, 12)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
-                .addComponent(jButton1)
+                .addGroup(JP_cifrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
                 .addContainerGap())
         );
 
@@ -284,7 +298,7 @@ private BigInteger[] big;
 
         jLabel14.setText("Texto descifrado");
 
-        jButton2.setText("Copiar");
+        jButton2.setText("Decifrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -303,6 +317,13 @@ private BigInteger[] big;
         claveprivada.setRows(5);
         jScrollPane9.setViewportView(claveprivada);
 
+        jButton4.setText("Copiar Descifrado");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_decifrarLayout = new javax.swing.GroupLayout(JP_decifrar);
         JP_decifrar.setLayout(JP_decifrarLayout);
         JP_decifrarLayout.setHorizontalGroup(
@@ -313,7 +334,10 @@ private BigInteger[] big;
                         .addGap(87, 87, 87)
                         .addGroup(JP_decifrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, JP_decifrarLayout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addGap(139, 139, 139)
+                                .addComponent(jButton4))))
                     .addGroup(JP_decifrarLayout.createSequentialGroup()
                         .addGap(205, 205, 205)
                         .addComponent(jLabel13)))
@@ -345,13 +369,15 @@ private BigInteger[] big;
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
                 .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addGap(17, 17, 17))
+                .addGroup(JP_decifrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton4))
+                .addGap(46, 46, 46))
             .addGroup(JP_decifrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JP_decifrarLayout.createSequentialGroup()
                     .addGap(153, 153, 153)
@@ -535,6 +561,23 @@ private BigInteger[] big;
                     jTextArea1.setText(recuperarTextoPlano);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        cliccopy(areaDestino.getText());
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        jTextArea1.setText("");
+        claveprivada.setText("");
+        JT_texto_cifrado.setText("");
+        JT_clave_publica.setText("");
+        areaOrigen.setText("");
+        areaDestino.setText("");
+        JT_publica.setText("");
+        TF_privada.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     public void separador(String texto){
   String[] separacion;
   
@@ -673,6 +716,8 @@ private BigInteger[] big;
     private javax.swing.JTextArea claveprivada;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
